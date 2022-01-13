@@ -9,7 +9,7 @@ def infos_image(image_file)->tuple:
     """
     try:
         image = Image.open(image_file)
-        imageproperties=(image.width, image.height, image.mode, image.format)
+        imageproperties=((image.size), image.mode, image.format)
         return imageproperties
     except: 
         print("Erreur dans le traitement de l'image",image_file)
