@@ -32,7 +32,6 @@ def recup_couleurs_image(image_file)->list:
         nom_image= Image.open(image_file)
     except :
         print ('Erreur sur ouverture du fichier ',image_file)
-        sys.exit(1)
     largeur,hauteur=nom_image.size
     # balayage de l'image colonne par colonne de gauche à droite
     liste=[]
