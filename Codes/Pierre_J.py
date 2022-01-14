@@ -12,15 +12,14 @@ def encode_message(msg:str, coul:list)->list:
     assert len(msg)<=len(coul), "Le binaire du message doit être plus court que le nombre de couleurs."
     for bn in msg:
         assert bn=="0"or bn=="1", "Le message doit être en binaire"
-    lst=[]
+    lst=coul[:]
     
     for i in range(len(msg)):
         if msg[i]=="0" and coul[i]%2==1:
-            lst.append(coul[i]-1)
+            lst[i]=coul[i]-1
         elif msg[i]=="1" and coul[i]%2==0:
-            lst.append(coul[i]+1)
-        else:
-            lst.append(coul[i])
+            lst[i]=coul[i]+1
+    print(lst)
     return lst
 
 if __name__=="__main__":
