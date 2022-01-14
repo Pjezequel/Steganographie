@@ -19,7 +19,6 @@ def encode_message(msg:str, coul:list)->list:
             lst[i]=coul[i]-1
         elif msg[i]=="1" and coul[i]%2==0:
             lst[i]=coul[i]+1
-    print(lst)
     return lst
 
 if __name__=="__main__":
