@@ -1,4 +1,5 @@
 from PIL import Image
+import sys
 def infos_image(image_file)->tuple:
     """
     Renvoie les dimensions, le format (e.g. PNG)
@@ -11,8 +12,10 @@ def infos_image(image_file)->tuple:
         image = Image.open(image_file)
         imageproperties=((image.size), image.mode, image.format)
         return imageproperties
+        
     except: 
         print("Erreur dans le traitement de l'image",image_file)
+        sys.exit(1)
 
 if __name__=="__main__":
     from doctest import testmod
@@ -33,7 +36,7 @@ def lecture_fichier(nom_fichier)->str:
             return lignes_texte
     except: 
         print("Erreur dans le traitement du fichier", nom_fichier)
-        
+        sys.exit(1)
 if __name__=="__main__":
     from doctest import testmod
     testmod()
