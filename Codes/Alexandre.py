@@ -9,9 +9,11 @@ def creation_image(caract:tuple, coul:list, image_file)->None:
     """
     assert len(caract)==3, "la liste placé en arguments n'est pas une liste sortie de \"infos_images\""
     img_modifie=Image.new(caract[1], (caract[0][0], caract[0][1]))
-    for x in range(caract[0][1]):
-            for y in range(0, caract[0][0]*3, 3):          
-                img_modifie.putpixel((x, y), (coul[y], coul[y+1], coul[y+2]))
+    a=0
+    for x in range(0, caract[0][0]-1):
+            for y in range(0, caract[0][1]-1):               
+                img_modifie.putpixel((x, y), (coul[a], coul[a+1], coul[a+2]))
+                a+=3
     img_modifie.save(image_file)
     
     
