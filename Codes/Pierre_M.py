@@ -5,8 +5,6 @@ def infos_image(image_file)->tuple:
     Renvoie les dimensions, le format (e.g. PNG)
     et le mode (e.g. RGB) de l'image
     originale si elle est trouvée !
-    >>> infos_image("image.png")
-    (772, 749, 'RGBA', 'PNG')
     """
     try:
         image = Image.open(image_file)
@@ -37,6 +35,7 @@ def lecture_fichier(nom_fichier)->str:
     except: 
         print("Erreur dans le traitement du fichier", nom_fichier)
         sys.exit(1)
+        
 if __name__=="__main__":
     from doctest import testmod
     testmod()

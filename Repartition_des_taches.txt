@@ -1,0 +1,5 @@
+Alexandre : creation_image et recup_couleurs_image
+Pierre JEZEQUEL : encode_message
+Malo : conv_message_vers_binaire et rgb
+Heremanu : creer_nom_sauvegarde
+Pierre MERDRIGNAC : lecture_fichier et infos_image

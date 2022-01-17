@@ -16,17 +16,16 @@ def conv_message_vers_binaire(texte:str)->str:
         binMsg+=temp.zfill(8)
     return binMsg
 
-def rgb(image)->None:
+def rgb(image:Image):
     """
-    Prend le nom d'une image en entrée et convertit son mode en "RGB"
+    Fonction convertissant le mode d'une image
+    de façon à ce qu'elle soit en RGB
     """
-    
     im = Image.open(image)
     rgb_im = im.convert('RGB')
     rgb_im.save(image)
 
 if __name__=="__main__": 
-
     from doctest import testmod 
     testmod() 
     print(conv_message_vers_binaire("coucou les nullos"))

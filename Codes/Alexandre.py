@@ -16,16 +16,6 @@ def creation_image(caract:tuple, coul:list, image_file)->None:
                 a+=3
     img_modifie.save(image_file)
     
-    
-    
-def lecture_fichier(nom_fichier)->str:
-    """
-    Fonction réalisant la lecture du fichier
-    texte à écrire sur une image
-    """
-    with open(nom_fichier, 'r', encoding="utf-8") as fichier_texte:
-        return fichier_texte.read(message)
-    
 def recup_couleurs_image(image_file)->list:
     """
     Cette fonction prend en entrée le nom de l'image et
