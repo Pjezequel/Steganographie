@@ -1,3 +1,4 @@
+from PIL import Image
 def conv_message_vers_binaire(texte:str)->str:
     """
     Cette fonction prend en entrée, le texte qui doit être caché dans l'image
@@ -14,6 +15,11 @@ def conv_message_vers_binaire(texte:str)->str:
         temp=(bin(ord(carac))[2:])
         binMsg+=temp.zfill(8)
     return binMsg
+
+def rgb(image):
+    im = Image.open(image)
+    rgb_im = im.convert('RGB')
+    rgb_im.save(image)
 
 if __name__=="__main__": 
 
